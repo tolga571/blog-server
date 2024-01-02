@@ -50,7 +50,7 @@ export const userCreate = async (req, res) => {
 
     jwt.sign(
       payload, // { user: { id: user.id } }
-      config.get("jwtSecret"), // (videoda) jwtToken yazdı ama URL kısmında jwtSecret yazıyordu bende onda  bunu yazdım
+      config.get("jwtSecret"),
       { expiresIn: 360000 },
       (err, token) => {
         if (err) throw err;

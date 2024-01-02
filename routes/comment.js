@@ -10,4 +10,5 @@ router.get("/", authAdmin, CommentController.getComments);
 router.delete('/:postId', CommentController.removeComment)
 router.patch('/:id', CommentController.updateComment)
 
+// Comment export
 export default router;

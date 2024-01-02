@@ -14,7 +14,6 @@ export const commentCreate = async (req, res) => {
   }
 
   try {
-    // post değişkenini newComment oluşturulmadan önce tanımla
     const newComment = new Comment({
       user,
       text,
@@ -26,8 +25,6 @@ export const commentCreate = async (req, res) => {
 
     await newComment.save();
 
-    // Post'u güncelle, comment'i ekleyerek
-    // await post.comment.push(newComment);
     await post.updateOne({ $push: { comment: newComment } });
 
     return res.status(201).json({

@@ -10,4 +10,5 @@ router.post("/", authAdmin, PostController.postCreate);
 router.patch('/:id', PostController.updatePost)
 router.delete('/:id', PostController.removePost)
 
+// Post export
 export default router;

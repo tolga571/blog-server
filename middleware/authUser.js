@@ -4,9 +4,7 @@ import User from "../models/User.js";
 import ROLES from './roles.js'
 
 const auth = async (req, res, next) => {
-  // Get token from header
-  debugger;
-
+  // Get Token from header
   const token = req.header("x-auth-token");
 
   // Check if not token

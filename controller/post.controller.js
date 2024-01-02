@@ -32,7 +32,6 @@ export const postCreate = async (req, res) => {
 };
 
 export const getPosts = async (req, res) => {
-  // post hk.
   try {
     const user = await Post.find({});
     const post = await Post.find()
@@ -53,7 +52,6 @@ export const getPostToComments = async (req, res) => {
   try {
     const postId = req.params.postId;
 
-    // Belirli bir post'a ait tüm comment'leri çekme
     const comments = await Comment.find({ post: postId })
       .populate("user", ["name", "email"])
       .populate("post", ["caption"])
@@ -72,8 +70,6 @@ export const getPostToComments = async (req, res) => {
     res.status(500).send("Server Error");
   }
 };
-
-// update and delete and myPosts eklenecek
 
 export const removePost = async (req, res) => {
   try {

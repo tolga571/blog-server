@@ -2,7 +2,7 @@ import * as AuthController from '../controller/auth.controller.js'
 import { Router } from "express";
 const router = Router();
 
-// From middleware
+// From Middleware
 import authAdmin from '../middleware/authAdmin.js';
 
 // @route       GET api/auth

@@ -9,4 +9,5 @@ router.get("/", authAdmin, UserController.getUsers);
 router.delete('/:id',authAdmin, UserController.remove)
 router.patch('/:id', UserController.updateUser)
 
+// User export
 export default router;

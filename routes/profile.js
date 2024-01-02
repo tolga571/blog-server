@@ -37,4 +37,5 @@ router.delete("/", authAdmin, ProfileController.deleteProfile);
 // @access      Private
 router.put("/experience", authAdmin, ProfileController.updateProfile);
 
+// Profile export
 export default router;

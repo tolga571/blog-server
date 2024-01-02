@@ -2,7 +2,6 @@ import Profile from "../models/Profile.js";
 
 // @route       GET api/profile/me
 // @desc        Get current users profile
-// @access      Private
 export const getProfileMe = async (req, res) => {
   // auth vardı
   try {
@@ -23,7 +22,6 @@ export const getProfileMe = async (req, res) => {
 
 // @route       POST api/profile
 // @desc        Create or update user profile
-// @access      Private
 export const createProfile = async (req, res) => {
   // const errors = validationResult(req);
   // if (!errors.isEmpty()) {
@@ -109,9 +107,6 @@ export const createProfile = async (req, res) => {
   }
 };
 
-// @route       GET api/profile
-// @desc        GET all profile
-// @access      Public
 export const getProfiles = async (req, res) => {
   try {
     const profiles = await Profile.find().populate("user", "");
@@ -123,9 +118,6 @@ export const getProfiles = async (req, res) => {
   }
 };
 
-// @route       GET api/profile/user/user_id
-// @desc        GET  profile by user ID
-// @access      Public
 export const getById = async (req, res) => {
   try {
     const profile = await Profile.findOne({
@@ -144,8 +136,6 @@ export const getById = async (req, res) => {
   }
 };
 
-// @route       DELETE api/profile
-// @desc        Delete profile, use & posts
 export const deleteProfile = async (req, res) => {
   try {
     // Remove profile
@@ -159,8 +149,6 @@ export const deleteProfile = async (req, res) => {
   }
 };
 
-// @route       PUT api/profile/experience
-// @desc        Add profile experience
 export const updateProfile = async (req, res) => {
   const { title, company, location, from, to, current, description } = req.body;
 

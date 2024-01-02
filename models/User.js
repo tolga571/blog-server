@@ -58,6 +58,7 @@ UserSchema.pre('find', function (next) {
   next();
 });
 
+// User export
 const User = mongoose.model("user", UserSchema);
 
 export default User;

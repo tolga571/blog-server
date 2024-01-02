@@ -113,6 +113,7 @@ const ProfileSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+// Profile export
 const Profile = mongoose.model("profile", ProfileSchema);
 
 export default Profile;
