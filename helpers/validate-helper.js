@@ -1,5 +1,6 @@
 import Joi from "joi";
 
+// Validation options
 export const authSchema = Joi.object({
   email: Joi.string().email().lowercase().required(),
   password: Joi.string().min(2).required(),

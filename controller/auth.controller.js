@@ -6,7 +6,6 @@ import User from "../models/User.js";
 
 // @route       POST api/auth
 // @desc        Authenticate user & get token
-// @access      Public
 export const authUser = async (req, res) => {
   //   const errors = await authSchema.validate(req.body);
 

@@ -23,7 +23,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser());
 
-// Init Middleware
+// init middleware
 app.use(express.json({ extended: false }));
 
 // Define Routes
