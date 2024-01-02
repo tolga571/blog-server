@@ -1,6 +1,6 @@
 ## Options
 
+.vscode
 node_modules
 .env
-./config/default.json
-.vscode
+./config/default.jso
